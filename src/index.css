@@ -1,29 +1,92 @@
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
-html, body {
-  height: 100%;
+html,
+body {
+    height: 100%;
 }
 
 body {
-  line-height: 1.5;
+    line-height: 1.5;
 }
 
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
 }
 
-input, button, textarea, select {
-  font: inherit;
+input,
+button,
+textarea,
+select {
+    font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+/* Item */
+.item {
+    --light-bg: #f8f8f8;
+    --dark-text: #434242;
+    --font-size: 10px;
+    --opaque-text: #686868;
+    --gap-1: 32px;
+    font-size: var(--font-size);
+    color: var(--dark-text);
+    width: 100%;
+    background-color: inherit;
+    list-style: none;
+}
+
+.item > button {
+    font-size: inherit;
+    display: block;
+    border: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: inherit;
+    height: var(--gap-1);
+}
+
+.item__icon-wrapper {
+    width: var(--gap-1);
+    height: var(--gap-1);
+}
+.item__text {
+    font-size: 1.5em;
+}
+
+.item__shoutcut {
+    margin-left: auto;
+    font-size: 1em;
+    color: var(--opaque-text);
+    width: max-content;
+}
+
+.item__option-wrapper {
+    width: var(--gap-1);
+    height: var(--gap-1);
+}
+article {
+    border: solid 1px;
 }
