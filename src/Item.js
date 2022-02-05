@@ -4,7 +4,7 @@ function Item(props) {
             <button onClick={props.onClick}>
                 <div className="item__icon-wrapper">
                     {props.hasIcon ? (
-                        <img src={props.icon} alt="icon" />
+                        props.Icon
                     ) : undefined}
                 </div>
                 <p className="item__text">{props.children} </p>
@@ -14,7 +14,7 @@ function Item(props) {
                         <img src={props.option} alt="options" />
                     ) : undefined}
                 </div>
-            </button>
+        </button>
         </li>
     );
 }
