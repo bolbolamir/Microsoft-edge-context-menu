@@ -61,6 +61,7 @@ h6 {
 }
 
 .item > button {
+    position: relative;
     font-size: inherit;
     display: block;
     border: none;
@@ -69,7 +70,7 @@ h6 {
     width: 100%;
     background-color: inherit;
     height: var(--gap-1);
-    border-radius:var(--border-radius);
+    border-radius: var(--border-radius);
 }
 .item > button[disabled] {
     opacity: 0.7;
@@ -78,6 +79,8 @@ h6 {
     opacity: 0.9;
     background-color: var(--hover-color);
 }
+/* .item > button:hover  */
+
 .item__icon-wrapper {
     width: var(--gap-1);
     height: var(--gap-1);
@@ -126,6 +129,7 @@ h6 {
 
 /* Option List */
 .optionList {
+    position: relative;
     --total-width: 360px;
     --border-radius: 4px;
     width: var(--total-width);
@@ -135,4 +139,19 @@ h6 {
         0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
     opacity: 0.9;
     border-radius: var(--border-radius);
+}
+.item .optionCategory {
+    display: none;
+}
+.item:hover .optionCategory,
+.item:focus .optionCategory {
+    display: block;
+    position: absolute;
+    left: calc(var(--total-width) - (var(--gap-1) / 2));
+    width: calc(var(--total-width) / 2);
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+        0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+        0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+    background-color: var(--light-bg);
 }
