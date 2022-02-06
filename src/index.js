@@ -5,9 +5,9 @@ import OptionList from "./OptionList.js";
 
 ReactDOM.render(
     <React.StrictMode>
-        <article>
+        <>
             <OptionList></OptionList>
-        </article>
+        </>
     </React.StrictMode>,
     document.getElementById("root")
 );
