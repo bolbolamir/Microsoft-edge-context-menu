@@ -1,4 +1,4 @@
-import RightArrow from "./RightArrow";
+import RightArrow from "./RightArrow.js";
 
 function Item(props) {
     // let rightArrow = <RightArrow></RightArrow>;

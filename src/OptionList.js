@@ -1,6 +1,6 @@
-import OptionCategory from "./OptionCategory";
-import Item from "./Item";
-import SVGWrapper from "./SVGWrapper";
+import OptionCategory from "./OptionCategory.js";
+import Item from "./Item.js";
+import SVGWrapper from "./SVGWrapper.js";
 
 const OptionList = (props) => {
     let SVG_24hour = (

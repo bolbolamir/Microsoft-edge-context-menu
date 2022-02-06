@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import OptionList from "./OptionList";
+import OptionList from "./OptionList.js";
 
 ReactDOM.render(
     <React.StrictMode>

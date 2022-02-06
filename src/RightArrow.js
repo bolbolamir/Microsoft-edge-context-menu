@@ -1,4 +1,4 @@
-import SVGWrapper from "./SVGWrapper";
+import SVGWrapper from "./SVGWrapper.js";
 
 let style = {
     fill: "currentColor",
