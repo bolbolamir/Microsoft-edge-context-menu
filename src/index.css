@@ -116,19 +116,19 @@ h6 {
     height: calc(var(--gap-1) / 2);
 }
 /* Option Category */
-.optionCategory {
+.option-category {
     --gap-1: 32px;
     --border-color: #eaeaea;
     padding: 2px;
     border-bottom: 1px solid var(--border-color);
     width: 100%;
 }
-.optionCategory:last-child {
+.option-category:last-child {
     border: none;
 }
 
 /* Option List */
-.optionList {
+.option-list {
     position: relative;
     --total-width: 360px;
     --border-radius: 4px;
@@ -140,11 +140,11 @@ h6 {
     opacity: 0.9;
     border-radius: var(--border-radius);
 }
-.item .optionCategory {
+.item .option-category {
     display: none;
 }
-.item:hover .optionCategory,
-.item:focus .optionCategory {
+.item:hover .option-category,
+.item:focus .option-category {
     display: block;
     position: absolute;
     left: calc(var(--total-width) - (var(--gap-1) / 2));
