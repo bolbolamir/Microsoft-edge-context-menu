@@ -1,6 +1,6 @@
 import RightArrow from "./RightArrow.js";
 
-function Item(props) {
+const Item = (props) => {
     // let rightArrow = <RightArrow></RightArrow>;
     return (
         <li className="item">
