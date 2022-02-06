@@ -1,9 +1,9 @@
 import Item from "./Item.js"
 
-const OptionCategory = (props) => {
+const OptionCategory = ({children}) => {
     return (
         <ul className="optionCategory">
-            {props.children}
+            {children}
         </ul>
      );
 }

@@ -1,22 +1,31 @@
 import RightArrow from "./RightArrow.js";
 
-const Item = (props) => {
+const Item = ({
+    onClick,
+    isDisabled,
+    children,
+    options,
+    hasOptions,
+    Icon,
+    hasIcon,
+    shortCut,
+}) => {
     // let rightArrow = <RightArrow></RightArrow>;
     return (
         <li className="item">
-            <button onClick={props.onClick} disabled={props.isDisabled}>
+            <button onClick={onClick} disabled={isDisabled}>
                 <div className="item__icon-wrapper">
-                    {props.hasIcon ? props.Icon : null}
+                    {hasIcon ? Icon : null}
                 </div>
-                <p className="item__text">{props.children} </p>
-                <small className="item__shoutcut">{props.shortCut}</small>
+                <p className="item__text">{children} </p>
+                <small className="item__shoutcut">{shortCut}</small>
                 <div className="item__option-wrapper">
-                    {props.hasOptions ? <RightArrow /> : null}
+                    {hasOptions ? <RightArrow /> : null}
                 </div>
-                    {props.options ? props.options : null}
+                {options ? options : null}
             </button>
         </li>
     );
-}
+};
 
 export default Item;
