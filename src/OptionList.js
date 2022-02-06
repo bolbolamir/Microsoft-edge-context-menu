@@ -1,6 +1,6 @@
-import OptionCategory from "./OptionCategory.js";
-import Item from "./Item.js";
-import SVGWrapper from "./SVGWrapper.js";
+import { OptionCategory } from "./OptionCategory.js";
+import { Item } from "./Item.js";
+import { SVGWrapper } from "./SVGWrapper.js";
 
 const OptionList = ({}) => {
     let SVG_24hour = (
@@ -154,4 +154,4 @@ const OptionList = ({}) => {
     );
 };
 
-export default OptionList;
+export { OptionList };

@@ -1,4 +1,4 @@
-import RightArrow from "./RightArrow.js";
+import { RightArrow } from "./RightArrowSVG.js";
 
 const Item = ({
     onClick,
@@ -28,4 +28,4 @@ const Item = ({
     );
 };
 
-export default Item;
+export { Item };
