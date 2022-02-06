@@ -1,7 +1,7 @@
 import RightArrow from "./RightArrow";
 
 function Item(props) {
-  // let rightArrow = <RightArrow></RightArrow>;
+    // let rightArrow = <RightArrow></RightArrow>;
     return (
         <li className="item">
             <button onClick={props.onClick} disabled={props.isDisabled}>
@@ -11,8 +11,9 @@ function Item(props) {
                 <p className="item__text">{props.children} </p>
                 <small className="item__shoutcut">{props.shortCut}</small>
                 <div className="item__option-wrapper">
-                    {props.hasOptions ? <RightArrow />: null}
+                    {props.hasOptions ? <RightArrow /> : null}
                 </div>
+                    {props.options ? props.options : null}
             </button>
         </li>
     );
