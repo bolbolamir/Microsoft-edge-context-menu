@@ -1,7 +1,15 @@
 import { Item } from "./Item.js";
 
 const OptionCategory = ({ children, isPopOver }) => {
-    return <ul className="option-category" data-ispopover={isPopOver}>{children}</ul>;
+    return (
+        <li
+            className="option-category"
+            data-ispopover={isPopOver}
+            aria-haspopup={isPopOver ? "menu" : null}
+        >
+            <ul>{children}</ul>
+        </li>
+    );
 };
 
 export { OptionCategory };
