@@ -13,15 +13,20 @@ const Item = ({
     // let rightArrow = <RightArrow></RightArrow>;
     return (
         <li className="item">
-            <button onClick={onClick} disabled={isDisabled}>
-                <div className="item-icon-wrapper">{hasIcon ? icon : null}</div>
-                <p className="item-text">{children} </p>
-                <small className="item-shoutcut">{shortCut}</small>
-                <div className="item-option-wrapper">
+            <article onClick={onClick} disabled={isDisabled} role="button">
+                <div className="item-icon-wrapper" aria-hidden="true">
+                    {hasIcon ? icon : null}
+                </div>
+                <p className="item-text">{children}</p>
+
+                <small className="item-shoutcut" aria-hidden={!shortCut}>
+                    <kbd>{shortCut}</kbd>
+                </small>
+                <div className="item-option-wrapper" aria-hidden="true">
                     {hasOptions ? <RightArrow /> : null}
                 </div>
-                {options ? options : null}
-            </button>
+                {hasOptions ? options : null}
+            </article>
         </li>
     );
 };
