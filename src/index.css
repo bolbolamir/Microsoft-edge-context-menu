@@ -155,6 +155,7 @@ h6 {
 .item:focus .items-category[data-ispopover] {
     display: block;
     position: absolute;
+    top: 0%;
     left: calc(var(--total-width) - (var(--gap-1) / 2));
     width: calc(var(--total-width) / 2);
     border-radius: var(--border-radius);
