@@ -1,4 +1,4 @@
-import { RightArrow } from "./RightArrowSVG.js";
+import { RightArrow } from "./SVGCopmponents.js";
 
 const Item = ({
     onClick,
