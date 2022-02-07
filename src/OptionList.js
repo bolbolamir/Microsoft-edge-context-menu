@@ -15,14 +15,14 @@ const OptionList = ({}) => {
                 <OptionCategory>
                     <Item
                         hasIcon={true}
-                        Icon={SVG_24hour}
+                        icon={SVG_24hour}
                         shortCut="Alt+Left arrow"
                     >
                         Back
                     </Item>
                     <Item
                         hasIcon={true}
-                        Icon={SVG_Add}
+                        icon={SVG_Add}
                         shortCut="Alt+Right arrow"
                         isDisabled={true}
                     >
@@ -31,23 +31,23 @@ const OptionList = ({}) => {
                     <Item shortCut="Ctrl+R">Refresh</Item>
                 </OptionCategory>
                 <OptionCategory>
-                    <Item hasIcon={true} Icon={SVG_ReadAloud} shortCut="Ctrl+S">
+                    <Item hasIcon={true} icon={SVG_ReadAloud} shortCut="Ctrl+S">
                         Save as
                     </Item>
                     <Item shortCut="Ctrl+P">Print</Item>
-                    <Item hasIcon={true} Icon={SVG_Notify}>
+                    <Item hasIcon={true} icon={SVG_Notify}>
                         Cast media to device
                     </Item>
                 </OptionCategory>
                 <OptionCategory>
                     <Item
                         hasIcon={true}
-                        Icon={SVG_Gallery}
+                        icon={SVG_Gallery}
                         shortCut="Ctrl+Shift+U"
                     >
                         Read aloud
                     </Item>
-                    <Item hasIcon={true} Icon={SVG_ReadAloud}>
+                    <Item hasIcon={true} icon={SVG_ReadAloud}>
                         Translate to English
                     </Item>
                 </OptionCategory>
@@ -56,13 +56,13 @@ const OptionList = ({}) => {
                         hasOptions={true}
                         options={
                             <OptionCategory data-ispopover={true}>
-                                <Item hasIcon={true} Icon={SVG_ReadAloud}>
+                                <Item hasIcon={true} icon={SVG_ReadAloud}>
                                     uuu
                                 </Item>
-                                <Item hasIcon={true} Icon={SVG_ReadAloud}>
+                                <Item hasIcon={true} icon={SVG_ReadAloud}>
                                     uuu
                                 </Item>
-                                <Item hasIcon={true} Icon={SVG_ReadAloud}>
+                                <Item hasIcon={true} icon={SVG_ReadAloud}>
                                     uuu
                                 </Item>
                             </OptionCategory>

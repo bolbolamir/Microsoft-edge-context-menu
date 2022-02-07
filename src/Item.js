@@ -6,7 +6,7 @@ const Item = ({
     children,
     options,
     hasOptions,
-    Icon,
+    icon,
     hasIcon,
     shortCut,
 }) => {
@@ -15,7 +15,7 @@ const Item = ({
         <li className="item">
             <button onClick={onClick} disabled={isDisabled}>
                 <div className="item__icon-wrapper">
-                    {hasIcon ? Icon : null}
+                    {hasIcon ? icon : null}
                 </div>
                 <p className="item__text">{children} </p>
                 <small className="item__shoutcut">{shortCut}</small>
