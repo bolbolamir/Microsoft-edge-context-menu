@@ -14,12 +14,10 @@ const Item = ({
     return (
         <li className="item">
             <button onClick={onClick} disabled={isDisabled}>
-                <div className="item__icon-wrapper">
-                    {hasIcon ? icon : null}
-                </div>
-                <p className="item__text">{children} </p>
-                <small className="item__shoutcut">{shortCut}</small>
-                <div className="item__option-wrapper">
+                <div className="item-icon-wrapper">{hasIcon ? icon : null}</div>
+                <p className="item-text">{children} </p>
+                <small className="item-shoutcut">{shortCut}</small>
+                <div className="item-option-wrapper">
                     {hasOptions ? <RightArrow /> : null}
                 </div>
                 {options ? options : null}

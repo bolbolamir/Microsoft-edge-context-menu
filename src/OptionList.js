@@ -55,7 +55,7 @@ const OptionList = ({}) => {
                     <Item
                         hasOptions={true}
                         options={
-                            <OptionCategory data-ispopover={true}>
+                            <OptionCategory isPopOver={true}>
                                 <Item hasIcon={true} icon={SVG_ReadAloud}>
                                     uuu
                                 </Item>

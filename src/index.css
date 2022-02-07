@@ -81,29 +81,29 @@ h6 {
 }
 /* .item > button:hover  */
 
-.item__icon-wrapper {
+.item-icon-wrapper {
     width: var(--gap-1);
     height: var(--gap-1);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.item__icon-wrapper > svg {
+.item-icon-wrapper > svg {
     width: calc(var(--gap-1) / 1.7);
     height: calc(var(--gap-1) / 1.7);
 }
-.item__text {
+.item-text {
     font-size: 1.5em;
 }
 
-.item__shoutcut {
+.item-shoutcut {
     margin-left: auto;
     font-size: 1em;
     color: var(--opaque-text);
     width: max-content;
 }
 
-.item__option-wrapper {
+.item-option-wrapper {
     width: var(--gap-1);
     height: var(--gap-1);
     display: flex;
@@ -111,7 +111,7 @@ h6 {
     align-items: center;
 }
 
-.item__option-wrapper > SVG {
+.item-option-wrapper > SVG {
     width: calc(var(--gap-1) / 2);
     height: calc(var(--gap-1) / 2);
 }
@@ -143,8 +143,8 @@ h6 {
 .item .option-category {
     display: none;
 }
-.item:hover .option-category,
-.item:focus .option-category {
+.item:hover .option-category[data-ispopover],
+.item:focus .option-category[data-ispopover] {
     display: block;
     position: absolute;
     left: calc(var(--total-width) - (var(--gap-1) / 2));
