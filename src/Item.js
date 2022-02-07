@@ -10,7 +10,6 @@ const Item = ({
     hasIcon,
     shortCut,
 }) => {
-    // let rightArrow = <RightArrow></RightArrow>;
     return (
         <li className="item">
             <article onClick={onClick} disabled={isDisabled} role="button">
@@ -20,7 +19,7 @@ const Item = ({
                 <p className="item-text">{children}</p>
 
                 <small className="item-shoutcut" aria-hidden={!shortCut}>
-                    <kbd>{shortCut}</kbd>
+                    <kbd aria-label="key binding">{shortCut}</kbd>
                 </small>
                 <div className="item-option-wrapper" aria-hidden="true">
                     {hasOptions ? <RightArrow /> : null}

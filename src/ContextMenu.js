@@ -1,4 +1,4 @@
-import { OptionCategory } from "./OptionCategory.js";
+import { ItemsCategory } from "./ItemsCategory.js";
 import { Item } from "./Item.js";
 import {
     SVG_24hour,
@@ -8,11 +8,11 @@ import {
     SVG_ReadAloud,
 } from "./SVGCopmponents";
 
-const OptionList = ({}) => {
+const ContextMenu = ({}) => {
     return (
         <>
-            <ul className="option-list">
-                <OptionCategory>
+            <ul className="context-menu">
+                <ItemsCategory>
                     <Item
                         hasIcon={true}
                         icon={SVG_24hour}
@@ -29,8 +29,8 @@ const OptionList = ({}) => {
                         Forward
                     </Item>
                     <Item shortCut="Ctrl+R">Refresh</Item>
-                </OptionCategory>
-                <OptionCategory>
+                </ItemsCategory>
+                <ItemsCategory>
                     <Item hasIcon={true} icon={SVG_ReadAloud} shortCut="Ctrl+S">
                         Save as
                     </Item>
@@ -38,8 +38,8 @@ const OptionList = ({}) => {
                     <Item hasIcon={true} icon={SVG_Notify}>
                         Cast media to device
                     </Item>
-                </OptionCategory>
-                <OptionCategory>
+                </ItemsCategory>
+                <ItemsCategory>
                     <Item
                         hasIcon={true}
                         icon={SVG_Gallery}
@@ -50,12 +50,12 @@ const OptionList = ({}) => {
                     <Item hasIcon={true} icon={SVG_ReadAloud}>
                         Translate to English
                     </Item>
-                </OptionCategory>
-                <OptionCategory>
+                </ItemsCategory>
+                <ItemsCategory>
                     <Item
                         hasOptions={true}
                         options={
-                            <OptionCategory isPopOver={true}>
+                            <ItemsCategory isPopOver={true}>
                                 <Item hasIcon={true} icon={SVG_ReadAloud}>
                                     uuu
                                 </Item>
@@ -65,15 +65,15 @@ const OptionList = ({}) => {
                                 <Item hasIcon={true} icon={SVG_ReadAloud}>
                                     uuu
                                 </Item>
-                            </OptionCategory>
+                            </ItemsCategory>
                         }
                     >
                         ffwe
                     </Item>
-                </OptionCategory>
+                </ItemsCategory>
             </ul>
         </>
     );
 };
 
-export { OptionList };
+export { ContextMenu };

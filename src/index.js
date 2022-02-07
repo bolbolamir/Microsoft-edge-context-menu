@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import { OptionList } from "./OptionList.js";
+import { ContextMenu } from "./ContextMenu.js";
 
 ReactDOM.render(
     <React.StrictMode>
         <>
-            <OptionList></OptionList>
+            <ContextMenu></ContextMenu>
         </>
     </React.StrictMode>,
     document.getElementById("root")

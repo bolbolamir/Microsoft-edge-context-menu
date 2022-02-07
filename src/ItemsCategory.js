@@ -1,9 +1,9 @@
 import { Item } from "./Item.js";
 
-const OptionCategory = ({ children, isPopOver }) => {
+const ItemsCategory = ({ children, isPopOver }) => {
     return (
         <li
-            className="option-category"
+            className="items-category"
             data-ispopover={isPopOver}
             aria-haspopup={isPopOver ? "menu" : null}
         >
@@ -12,4 +12,4 @@ const OptionCategory = ({ children, isPopOver }) => {
     );
 };
 
-export { OptionCategory };
+export { ItemsCategory };
