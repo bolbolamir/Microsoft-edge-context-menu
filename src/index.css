@@ -31,6 +31,7 @@ svg {
 
 input,
 button,
+article,
 textarea,
 select {
     font: inherit;
@@ -47,12 +48,8 @@ h6 {
 }
 /* Item */
 .item {
-    --light-bg: #f8f8f8;
-    --hover-color: #d3d3d3;
-    --dark-text: #434242;
     --font-size: 10px;
-    --opaque-text: #686868;
-    --gap-1: 32px;
+
     font-size: var(--font-size);
     color: var(--dark-text);
     width: 100%;
@@ -60,7 +57,7 @@ h6 {
     list-style: none;
 }
 
-.item > button {
+.item > article {
     position: relative;
     font-size: inherit;
     display: block;
@@ -72,14 +69,15 @@ h6 {
     height: var(--gap-1);
     border-radius: var(--border-radius);
 }
-.item > button[disabled] {
+
+.item > article[disabled] {
     opacity: 0.7;
 }
-.item > button:hover {
+
+.item > article:hover {
     opacity: 0.9;
     background-color: var(--hover-color);
 }
-/* .item > button:hover  */
 
 .item-icon-wrapper {
     width: var(--gap-1);
@@ -88,12 +86,14 @@ h6 {
     justify-content: center;
     align-items: center;
 }
+
 .item-icon-wrapper > svg {
     width: calc(var(--gap-1) / 1.7);
     height: calc(var(--gap-1) / 1.7);
 }
+
 .item-text {
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 .item-shoutcut {
@@ -115,34 +115,42 @@ h6 {
     width: calc(var(--gap-1) / 2);
     height: calc(var(--gap-1) / 2);
 }
+
 /* Option Category */
 .option-category {
-    --gap-1: 32px;
     --border-color: #eaeaea;
     padding: 2px;
     border-bottom: 1px solid var(--border-color);
     width: 100%;
+    list-style: none;
 }
+
 .option-category:last-child {
     border: none;
 }
 
 /* Option List */
 .option-list {
-    position: relative;
-    --total-width: 360px;
+    --gap-1: 28px;
+    --light-bg: #fafafa;
+    --hover-color: #d3d3d3;
+    --opaque-text: #686868;
+    --dark-text: #474747;
+    --total-width: 312px;
     --border-radius: 4px;
+    position: relative;
     width: var(--total-width);
     padding: 5px;
     box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
         0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
         0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
-    opacity: 0.9;
     border-radius: var(--border-radius);
 }
+
 .item .option-category {
     display: none;
 }
+
 .item:hover .option-category[data-ispopover],
 .item:focus .option-category[data-ispopover] {
     display: block;
