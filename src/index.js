@@ -5,9 +5,7 @@ import { ContextMenu } from "./ContextMenu.js";
 
 ReactDOM.render(
     <React.StrictMode>
-        <>
-            <ContextMenu></ContextMenu>
-        </>
+        <ContextMenu></ContextMenu>
     </React.StrictMode>,
     document.getElementById("root")
 );
