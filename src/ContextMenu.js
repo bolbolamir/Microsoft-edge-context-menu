@@ -65,6 +65,35 @@ const ContextMenu = ({}) => {
 
 export { ContextMenu };
 
+    const Item = ({
+        onClick,
+        isDisabled,
+        children,
+        options,
+        icon,
+        shortCut,
+    }) => {
+        return (
+            <li className="item">
+                <article onClick={onClick} disabled={isDisabled} role="button">
+                    <div className="item-icon-wrapper" aria-hidden="true">
+                        {icon}
+                    </div>
+                    <p className="item-text">{children}</p>
+
+                    <small className="item-shoutcut" aria-hidden={!shortCut}>
+                        <kbd aria-label="key binding">{shortCut}</kbd>
+                    </small>
+                    <div className="item-option-wrapper" aria-hidden="true">
+                        {options ? <SVG_RightArrow /> : null}
+                    </div>
+                    {options}
+                </article>
+            </li>
+        );
+    };
+
+
 const SVG_RightArrow = ({}) => (
     <svg
         style={style}
