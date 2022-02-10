@@ -24,6 +24,7 @@ img,
 picture,
 video,
 canvas,
+kbd,
 svg {
     display: block;
     max-width: 100%;
@@ -31,7 +32,7 @@ svg {
 
 input,
 button,
-article,
+button,
 textarea,
 select {
     font: inherit;
@@ -47,7 +48,7 @@ h6 {
     overflow-wrap: break-word;
 }
 /* Item */
-.item {
+.menu-item {
     --font-size: 10px;
 
     font-size: var(--font-size);
@@ -55,9 +56,10 @@ h6 {
     width: 100%;
     background-color: inherit;
     list-style: none;
+    padding: 2px;
 }
 
-.item > article {
+.menu-item > button {
     position: relative;
     font-size: inherit;
     display: block;
@@ -70,11 +72,11 @@ h6 {
     border-radius: var(--border-radius);
 }
 
-.item > article[disabled] {
+.menu-item > button[disabled] {
     opacity: 0.7;
 }
 
-.item > article:hover {
+.menu-item > button:hover {
     opacity: 0.9;
     background-color: var(--hover-color);
 }
@@ -88,17 +90,19 @@ h6 {
 }
 
 .item-icon-wrapper > svg {
-    width: calc(var(--gap-1) / 1.7);
-    height: calc(var(--gap-1) / 1.7);
+    width: calc(var(--gap-1) / 1.5);
+    height: calc(var(--gap-1) / 1.5);
 }
 
 .item-text {
-    font-size: 1.4em;
+    font-size: 1.5em;
+    padding-left: 8px;
+
 }
 
 .item-shoutcut {
     margin-left: auto;
-    font-size: 1em;
+    font-size: 1.2em;
     color: var(--opaque-text);
     width: max-content;
 }
@@ -136,7 +140,7 @@ h6 {
     --hover-color: #d3d3d3;
     --opaque-text: #686868;
     --dark-text: #474747;
-    --total-width: 312px;
+    --total-width: 374px;
     --border-radius: 4px;
     position: relative;
     width: var(--total-width);
@@ -147,12 +151,12 @@ h6 {
     border-radius: var(--border-radius);
 }
 
-.item .items-category {
+.menu-item div {
     display: none;
 }
 
-.item:hover .items-category[data-ispopover],
-.item:focus .items-category[data-ispopover] {
+.menu-item:hover div[data-ispopover],
+.menu-item:focus div[data-ispopover] {
     display: block;
     position: absolute;
     top: 0%;
