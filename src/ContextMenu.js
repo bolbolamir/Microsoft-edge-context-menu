@@ -1,5 +1,4 @@
-import { ItemsCategory } from "./ItemsCategory.js";
-import { Item } from "./Item.js";
+
 
 const ContextMenu = ({}) => {
     return (
@@ -63,6 +62,7 @@ const ContextMenu = ({}) => {
     );
 };
 
+
 export { ContextMenu };
 
     const ItemsCategory = ({ children, isPopOver }) => {
@@ -109,7 +109,7 @@ export { ContextMenu };
 
 const SVG_RightArrow = ({}) => (
     <svg
-        style={style}
+        
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1024 1024"
     >
