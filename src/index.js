@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import { ContextMenu } from "./ContextMenu.js";
+import { icons } from "./icons";
 
 ReactDOM.render(
     <React.StrictMode>
@@ -10,30 +11,30 @@ ReactDOM.render(
                 {
                     name: "Back",
                     shortcut: "Alt+Left arrow",
-                    icon: "SVG_24hour",
+                    icon: icons.SVG_24hour,
                     id: 1,
                 },
                 {
                     name: "Forward",
                     shortcut: "Alt+Right arrow",
-                    icon: "SVG_Add",
+                    icon: icons.SVG_Add,
                     isDisabled: true,
                     id: 2,
                 },
                 {
-                    name: ">Refresh",
+                    name: "Refresh",
                     shortcut: "Ctrl+R",
                     id: 3,
                 },
                 {
                     name: "Save as",
                     shortcut: "Ctrl+S",
-                    icon: "SVG_ReadAloud",
+                    icon: icons.SVG_ReadAloud,
                     id: 4,
                 },
                 {
                     name: "Cast media to device",
-                    icon: "SVG_Notify",
+                    icon: icons.SVG_Notify,
                     id: 5,
                 },
                 {
@@ -44,7 +45,7 @@ ReactDOM.render(
                         {
                             name: "Forward",
                             shortcut: "Alt+Right arrow",
-                            icon: "SVG_Add",
+                            icon: icons.SVG_Add,
                             isDisabled: true,
                             id: 6.2,
                         },

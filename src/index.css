@@ -151,17 +151,17 @@ h6 {
     border-radius: var(--border-radius);
 }
 
-.menu-item div {
+.menu-item ul {
     display: none;
 }
 
-.menu-item:hover div[data-ispopover],
-.menu-item:focus div[data-ispopover] {
+.menu-item:hover ul[data-ispopover],
+.menu-item:focus ul[data-ispopover] {
     display: block;
     position: absolute;
     top: 0%;
     left: calc(var(--total-width) - (var(--gap-1) / 2));
-    width: calc(var(--total-width) / 2);
+    width: var(--total-width);
     border-radius: var(--border-radius);
     box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
         0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
