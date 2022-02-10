@@ -1,6 +1,7 @@
 import { icons } from "./icons";
 
-function i(item) {
+function itemify(item) {
+    console.log(item);
     return (
         <li className="menu-item" key={item.id.toString()}>
             <button onClick={item.onClick} disabled={item.isDisabled}>
@@ -18,78 +19,16 @@ function i(item) {
                 <span className="item-option-wrapper" aria-hidden="true">
                     {item.options != null ? icons.SVG_RightArrow : null}
                 </span>
-                {item.options ? (
-                    <ul data-ispopover="true">i(item.options)</ul>
-                ) : null}
             </button>
+                {item.options ? (
+                <ul data-ispopover="true">{item.options.map((item)=>{return itemify(item)})}</ul>
+                ) : null}
         </li>
     );
 }
 
 const ContextMenu = ({ items }) => {
-    let mappedItems = items.map((item) => {
-        return (
-            <li className="menu-item" key={item.id.toString()}>
-                <button onClick={item.onClick} disabled={item.isDisabled}>
-                    <span className="item-icon-wrapper" aria-hidden="true">
-                        {item.icon}
-                    </span>
-                    <span className="item-text">{item.name}</span>
-                    <kbd
-                        aria-label="key binding"
-                        className="item-shoutcut"
-                        aria-hidden={!item.shortcut}
-                    >
-                        {item.shortcut}
-                    </kbd>
-                    <span className="item-option-wrapper" aria-hidden="true">
-                        {item.options != null ? icons.SVG_RightArrow : null}
-                    </span>
-                    {item.options ? (
-                        <ul data-ispopover="true">
-                            {item.options.map((item) => {
-                                return (
-                                    <li
-                                        className="menu-item"
-                                        key={item.id.toString()}
-                                    >
-                                        <button
-                                            onClick={item.onClick}
-                                            disabled={item.isDisabled}
-                                        >
-                                            <span
-                                                className="item-icon-wrapper"
-                                                aria-hidden="true"
-                                            >
-                                                {item.icon}
-                                            </span>
-                                            <span className="item-text">
-                                                {item.name}
-                                            </span>
-                                            <kbd
-                                                aria-label="key binding"
-                                                className="item-shoutcut"
-                                                aria-hidden={!item.shortcut}
-                                            >
-                                                {item.shortcut}
-                                            </kbd>
-                                            <span
-                                                className="item-option-wrapper"
-                                                aria-hidden="true"
-                                            >
-                                                {/* {item.options ? icons.SVG_RightArrow : null} */}
-                                            </span>{" "}
-                                        </button>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    ) : null}
-                </button>
-            </li>
-        );
-    });
-    console.log(mappedItems);
+    let mappedItems = items.map((item) => { return itemify(item) });
     return <ul className="context-menu">{mappedItems}</ul>;
 };
 
