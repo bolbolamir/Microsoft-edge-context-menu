@@ -110,6 +110,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: calc(var(--gap-1) / 2);
 }
 
 .menu-item > button > span:last-child > SVG {
