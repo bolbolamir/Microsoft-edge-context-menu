@@ -26,6 +26,7 @@ ReactDOM.render(
                     shortcut: "Ctrl+R",
                     id: 3,
                 },
+                { isSeperator: true, id: 5555 },
                 {
                     name: "Save as",
                     shortcut: "Ctrl+S",
