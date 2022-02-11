@@ -42,7 +42,26 @@ ReactDOM.render(
                     name: "See more",
                     id: 6,
                     options: [
-                        { name: "Back", shortcut: "Alt+Left arrow", id: 6.1 },
+                        {
+                            name: "Back",
+                            shortcut: "Alt+Left arrow",
+                            id: 6.1,
+                            options: [
+                                {
+                                    name: "Back",
+                                    shortcut: "Alt+Left arrow",
+                                    id: 6.1,
+                                },
+                                {
+                                    name: "Forward",
+                                    shortcut: "Alt+Right arrow",
+                                    icon: icons.SVG_Add,
+                                    isDisabled: true,
+                                    id: 6.2,
+                                },
+                                { name: "xxz", id: 6.3 },
+                            ],
+                        },
                         {
                             name: "Forward",
                             shortcut: "Alt+Right arrow",

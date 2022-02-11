@@ -14,7 +14,7 @@ function itemify(item) {
                 </span>
             </button>
             {item.options ? (
-                <ul data-ispopover="true" className="context-menu">
+                <ul data-ispopover="true" className="context-menu" role="menu">
                     {item.options.map((item) => {
                         return itemify(item);
                     })}
