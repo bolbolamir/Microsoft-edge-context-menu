@@ -1,6 +1,6 @@
 import { icons } from "./icons";
 
-function itemify(item , nestingLevel = 0) {
+function itemify(item, nestingLevel = 0) {
     return !item.isSeperator ? (
         <li className="menu-item" key={item.id.toString()}>
             <button onClick={item.onClick} disabled={item.isDisabled}>
@@ -14,7 +14,12 @@ function itemify(item , nestingLevel = 0) {
                 </span>
             </button>
             {item.options ? (
-                <ul data-ispopover="true" className="context-menu" role="menu" data-nestingLevel = {nestingLevel}>
+                <ul
+                    data-ispopover="true"
+                    className="context-menu"
+                    role="menu"
+                    data-nesting-level={nestingLevel}
+                >
                     {item.options.map((item) => {
                         return itemify(item, nestingLevel + 1);
                     })}

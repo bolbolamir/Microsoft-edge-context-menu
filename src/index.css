@@ -59,7 +59,7 @@ li {
     color: var(--dark-text);
     width: 100%;
     background-color: inherit;
-    padding: calc( var(--gap-1) / 4 );
+    padding: calc(var(--gap-1) / 4);
 }
 
 .menu-item > button {
@@ -96,7 +96,6 @@ li {
     width: calc(var(--height-1) / 1.6);
     height: calc(var(--height-1) / 1.6);
 }
-
 
 .menu-item > button > kbd {
     margin-left: auto;
@@ -135,7 +134,7 @@ li {
 
 /* Option List */
 .context-menu {
-    --gap-1 : 10px;
+    --gap-1: 10px;
     --height-1: 33px;
     --light-bg: #fafafa;
     --hover-color: #d3d3d3;
@@ -168,5 +167,5 @@ li {
         0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
         0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
     background-color: var(--light-bg);
-    opacity: calc(1 - attr(data-nestingLevel) * 0.2);
+    opacity: calc(1 - attr(data-nesting-level) * 0.2);
 }
