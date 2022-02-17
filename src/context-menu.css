@@ -101,7 +101,9 @@
         --color-border: #636363;
     }
 
-    position: relative;
+    position: fixed;
+    /* left : attr(data-x);
+    top :attr(data-y) ; */
     width: var(--total-width);
     padding: calc(var(--gap-1) / 4);
 
