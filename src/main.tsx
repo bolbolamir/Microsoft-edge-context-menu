@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import { ContextMenu } from "./ContextMenu.tsx";
+import "./main.css";
+import { ContextMenu } from "./context-menu.tsx";
 import { icons } from "./icons.tsx";
 
 ReactDOM.render(
