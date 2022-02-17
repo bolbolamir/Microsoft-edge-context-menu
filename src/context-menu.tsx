@@ -1,5 +1,6 @@
 import { icons } from "./icons";
 import "./context-menu.css"
+import React from "react";
 
 function itemify(item, nestingLevel = 0) {
     return !item.isSeperator ? (
