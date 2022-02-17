@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import { ContextMenu } from "./ContextMenu.js";
-import { icons } from "./icons";
+import { ContextMenu } from "./ContextMenu.tsx";
+import { icons } from "./icons.tsx";
 
 ReactDOM.render(
     <React.StrictMode>
