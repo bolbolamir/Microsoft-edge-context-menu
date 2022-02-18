@@ -1,6 +1,11 @@
-import  Icon from "./icons";
+import Icon from "./icons";
 import "./context-menu.css";
-import React, { JSXElementConstructor, useCallback, useEffect, useState } from "react";
+import React, {
+    JSXElementConstructor,
+    useCallback,
+    useEffect,
+    useState,
+} from "react";
 
 export type item = {
     id: number | string;
@@ -14,13 +19,19 @@ export type item = {
 };
 
 function itemify(item: item, nestingLevel = 0) {
-    return !item.seperator ? (
+    if (item.seperator) {
+        return <li role="separator" key={item.id.toString()}></li>;
+    }
+
+    return (
         <li className="menu-item" key={item.id.toString()}>
             <button onClick={item.onClick} disabled={item.disabled}>
                 <span aria-hidden="true">{item.icon}</span>
                 {item.name}
                 <kbd aria-label="key binding" aria-hidden={!item.shortcut}>
-                    {item.shortcut instanceof Array? item.shortcut.join("+") : null}
+                    {item.shortcut instanceof Array
+                        ? item.shortcut.join("+")
+                        : null}
                 </kbd>
                 <span aria-hidden="true">
                     {item.options != null ? Icon("SVG_rightArrow") : null}
@@ -39,8 +50,6 @@ function itemify(item: item, nestingLevel = 0) {
                 </ul>
             ) : null}
         </li>
-    ) : (
-        <li role="separator" key={item.id.toString()}></li>
     );
 }
 
