@@ -4,10 +4,11 @@
     font-size: var(--font-size);
     color: var(--color-text);
     width: 100%;
-    background-color: inherit;
+    background-color: transparent;
     padding: calc(var(--gap-1) / 4);
 
     & > button {
+        color: var(--color-text);
         font-size: 1.4em;
         display: block;
         border: none;
@@ -36,6 +37,14 @@
             & > svg {
                 width: calc(var(--height-1) / 1.6);
                 height: calc(var(--height-1) / 1.6);
+                /* fill: var(--color-text); */
+                /* color: var(--color-text); */
+                /* stroke: var(--color-text); */
+                /* & * {
+                    fill: var(--color-text);
+                    color: var(--color-text);
+                    stroke: var(--color-text);
+                } */
             }
         }
 
@@ -52,6 +61,11 @@
                 height: calc(var(--height-1) / 2);
                 padding: calc(var(--gap-1) / 8);
                 opacity: 0.7;
+                /* & * {
+                    fill: var(--color-text);
+                    color: var(--color-text);
+                    stroke: var(--color-text);
+                } */
             }
         }
 
@@ -74,8 +88,7 @@
         position: absolute;
         top: 0%;
         left: calc(var(--total-width) - var(--gap-1));
-        background-color: var(--color-background);
-        opacity: calc(1 - attr(data-nesting-level) * 0.2);
+        background: var(--color-background);
     }
 }
 
@@ -100,6 +113,7 @@
         -ms-user-select: none; /* Internet Explorer/Edge */
         user-select: none;
     }
+
     &[data-theme="dark"] {
         --color-text: #ffffff;
         --color-text-disabled: #ababab;
@@ -108,9 +122,12 @@
         --color-border: #636363;
     }
 
+    background: var(--color-background);
     position: fixed;
+
     /* left : attr(data-x);
     top :attr(data-y) ; */
+
     width: var(--total-width);
     padding: calc(var(--gap-1) / 4);
 
@@ -125,12 +142,17 @@
         /* --border-color: #eaeaea; */
         --size: 2px;
         padding: var(--size);
-        border-bottom: calc(var(--size) / 2) solid var(--color-text-disabled);
+        border-top: calc(var(--size) / 2) solid var(--color-text-disabled);
+        margin-top: var(--size);
         width: 100%;
     }
 
     & > li[role="separator"]:last-child {
         border: none;
         padding: none;
+    }
+
+    & .context-menu {
+        background: var(--color-background);
     }
 }

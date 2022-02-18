@@ -74,7 +74,7 @@ let items : Array<item> = [
 ReactDOM.render(
     <React.StrictMode>
         <ContextMenu
-            items={items}
+            items={items} theme={"light"}
         ></ContextMenu>
     </React.StrictMode>,
     document.getElementById("root")

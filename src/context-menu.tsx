@@ -18,7 +18,7 @@ export type item = {
     onClick?: () => void;
 };
 
-function itemify(item: item, nestingLevel = 0) {
+function itemify(item: item, theme: string, nestingLevel: number = 0) {
     if (item.seperator) {
         return <li role="separator" key={item.id.toString()}></li>;
     }
@@ -43,9 +43,10 @@ function itemify(item: item, nestingLevel = 0) {
                     className="context-menu"
                     role="menu"
                     data-nesting-level={nestingLevel}
+                    data-theme={theme}
                 >
                     {item.options.map((item) => {
-                        return itemify(item, nestingLevel + 1);
+                        return itemify(item, theme, nestingLevel + 1);
                     })}
                 </ul>
             ) : null}
@@ -53,7 +54,13 @@ function itemify(item: item, nestingLevel = 0) {
     );
 }
 
-const ContextMenu = ({ items }: { items: Array<item> }) => {
+const ContextMenu = ({
+    items,
+    theme,
+}: {
+    items: Array<item>;
+    theme: string;
+}) => {
     const [showing, setShowing] = useState<boolean>(false);
     const [yAxis, setYAxis] = useState<string>("0px");
     const [xAxis, setXAxis] = useState<string>("0px");
@@ -93,10 +100,12 @@ const ContextMenu = ({ items }: { items: Array<item> }) => {
         };
     }, [handleShowing]);
 
-    let mappedItems = items.map((item: item) => itemify(item));
+    let mappedItems = items.map((item: item,) =>
+        itemify(item, theme)
+    );
     let style = { top: yAxis, left: xAxis };
     return showing ? (
-        <ul className="context-menu" style={style}>
+        <ul className="context-menu" style={style} data-theme={theme}>
             {mappedItems}
         </ul>
     ) : null;
