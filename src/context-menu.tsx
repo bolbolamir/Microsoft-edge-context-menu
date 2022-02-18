@@ -6,7 +6,7 @@ export type item = {
     id: number | string;
     name?: string;
     shortcut?: Array<string>;
-    isDisabled?: boolean;
+    disabled?: boolean;
     icon?: JSX.Element | null;
     options?: Array<item>;
     seperator?: boolean;
@@ -16,7 +16,7 @@ export type item = {
 function itemify(item: item, nestingLevel = 0) {
     return !item.seperator ? (
         <li className="menu-item" key={item.id.toString()}>
-            <button onClick={item.onClick} disabled={item.isDisabled}>
+            <button onClick={item.onClick} disabled={item.disabled}>
                 <span aria-hidden="true">{item.icon}</span>
                 {item.name}
                 <kbd aria-label="key binding" aria-hidden={!item.shortcut}>
