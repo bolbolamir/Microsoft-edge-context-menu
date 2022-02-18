@@ -93,6 +93,13 @@
     --color-background-hover: #eeeeee;
     --color-border: #dadada;
 
+    -ms-user-select: none;
+    user-select: none;
+
+    & * {
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none;
+    }
     &[data-theme="dark"] {
         --color-text: #ffffff;
         --color-text-disabled: #ababab;
