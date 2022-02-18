@@ -1,13 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./main.css";
-import { ContextMenu } from "./context-menu.tsx";
+import { ContextMenu , type item } from "./context-menu.tsx";
 import { icons } from "./icons.tsx";
 
-ReactDOM.render(
-    <React.StrictMode>
-        <ContextMenu
-            items={[
+let items : Array<item> = [
                 {
                     name: "Back",
                     shortcut: "Alt+Left arrow",
@@ -72,7 +69,12 @@ ReactDOM.render(
                         { name: "xxz", id: 6.3 },
                     ],
                 },
-            ]}
+            ]
+
+ReactDOM.render(
+    <React.StrictMode>
+        <ContextMenu
+            items={items}
         ></ContextMenu>
     </React.StrictMode>,
     document.getElementById("root")

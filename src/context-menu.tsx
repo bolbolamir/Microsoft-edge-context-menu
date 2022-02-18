@@ -2,7 +2,18 @@ import { icons } from "./icons";
 import "./context-menu.css";
 import React, { useCallback, useEffect, useState } from "react";
 
-function itemify(item, nestingLevel = 0) {
+type item = {
+    id: number | string;
+    name: string;
+    shortcut?: string;
+    isDisabled?: boolean;
+    icon?: object;
+    options?: Array<item>;
+    seperator?: boolean;
+    onClick?: () => void;
+};
+
+function itemify(item: item, nestingLevel = 0) {
     return !item.seperator ? (
         <li className="menu-item" key={item.id.toString()}>
             <button onClick={item.onClick} disabled={item.isDisabled}>
@@ -33,25 +44,26 @@ function itemify(item, nestingLevel = 0) {
     );
 }
 
-const ContextMenu = ({ items }) => {
-    const [showing, setShowing] = useState(false);
-    const [yAxis, setYAxis] = useState("0px");
-    const [xAxis, setXAxis] = useState("0px");
+const ContextMenu = ({ items }: { items: Array<item> }) => {
+    const [showing, setShowing] = useState<boolean>(false);
+    const [yAxis, setYAxis] = useState<string>("0px");
+    const [xAxis, setXAxis] = useState<string>("0px");
 
     const handleClosing = useCallback((event) => {
         let element = document.querySelector(".context-menu");
-        var rect = element.getBoundingClientRect();
-        console.log(rect);
+        if (element) {
+            let elementPositon = element.getBoundingClientRect();
 
-        if (
-            event.clientX > rect.left &&
-            event.clientX < rect.right &&
-            event.clientY > rect.top &&
-            event.clientY < rect.bottom
-        ) {
-            return 0;
-        } else {
-            setShowing(false);
+            if (
+                event.clientX > elementPositon.left &&
+                event.clientX < elementPositon.right &&
+                event.clientY > elementPositon.top &&
+                event.clientY < elementPositon.bottom
+            ) {
+                return 0;
+            } else {
+                setShowing(false);
+            }
         }
     }, []);
 
@@ -72,7 +84,7 @@ const ContextMenu = ({ items }) => {
         };
     }, [handleShowing]);
 
-    let mappedItems = items.map((item) => itemify(item));
+    let mappedItems = items.map((item: item) => itemify(item));
     let style = { top: yAxis, left: xAxis };
     return showing ? (
         <ul className="context-menu" style={style}>
