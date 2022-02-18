@@ -1,20 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./main.css";
-import { ContextMenu , type item } from "./context-menu.tsx";
-import { icons } from "./icons.tsx";
+import { ContextMenu , type item } from "./context-menu";
+import Icon from "./icons";
 
 let items : Array<item> = [
                 {
                     name: "Back",
                     shortcut: ["Alt","Left" ,"arrow"],
-                    icon: icons.SVG_24hour,
+                    icon: Icon("SVG_24hour"),
                     id: 1,
                 },
                 {
                     name: "Forward",
                     shortcut: ["Alt","Right", "arrow"],
-                    icon: icons.SVG_Add,
+                    icon: Icon("SVG_Add"),
                     isDisabled: true,
                     id: 2,
                 },
@@ -27,12 +27,12 @@ let items : Array<item> = [
                 {
                     name: "Save as",
                     shortcut: ["Ctrl","S"],
-                    icon: icons.SVG_ReadAloud,
+                    icon: Icon("SVG_ReadAloud"),
                     id: 4,
                 },
                 {
                     name: "Cast media to device",
-                    icon: icons.SVG_Notify,
+                    icon: Icon("SVG_Notify"),
                     id: 5,
                 },
                 {
@@ -52,7 +52,7 @@ let items : Array<item> = [
                                 {
                                     name: "Forward",
                                     shortcut: ["Alt", "Right" ,"arrow"],
-                                    icon: icons.SVG_Add,
+                                    icon: Icon("SVG_Add"),
                                     isDisabled: true,
                                     id: 6.2,
                                 },
@@ -62,7 +62,7 @@ let items : Array<item> = [
                         {
                             name: "Forward",
                             shortcut: ["Alt", "Right" ,"arrow"],
-                            icon: icons.SVG_Add,
+                            icon: Icon("SVG_Add"),
                             isDisabled: true,
                             id: 6.2,
                         },

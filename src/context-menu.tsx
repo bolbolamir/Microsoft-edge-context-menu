@@ -1,13 +1,13 @@
-import { icons } from "./icons";
+import  Icon from "./icons";
 import "./context-menu.css";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { JSXElementConstructor, useCallback, useEffect, useState } from "react";
 
-type item = {
+export type item = {
     id: number | string;
-    name: string;
+    name?: string;
     shortcut?: Array<string>;
     isDisabled?: boolean;
-    icon?: object;
+    icon?: JSX.Element | null;
     options?: Array<item>;
     seperator?: boolean;
     onClick?: () => void;
@@ -23,7 +23,7 @@ function itemify(item: item, nestingLevel = 0) {
                     {item.shortcut instanceof Array? item.shortcut.join("+") : null}
                 </kbd>
                 <span aria-hidden="true">
-                    {item.options != null ? icons.SVG_RightArrow : null}
+                    {item.options != null ? Icon("SVG_rightArrow") : null}
                 </span>
             </button>
             {item.options ? (
