@@ -5,7 +5,7 @@ import React, { useCallback, useEffect, useState } from "react";
 type item = {
     id: number | string;
     name: string;
-    shortcut?: string;
+    shortcut?: Array<string>;
     isDisabled?: boolean;
     icon?: object;
     options?: Array<item>;
@@ -20,7 +20,7 @@ function itemify(item: item, nestingLevel = 0) {
                 <span aria-hidden="true">{item.icon}</span>
                 {item.name}
                 <kbd aria-label="key binding" aria-hidden={!item.shortcut}>
-                    {item.shortcut}
+                    {item.shortcut instanceof Array? item.shortcut.join("+") : null}
                 </kbd>
                 <span aria-hidden="true">
                     {item.options != null ? icons.SVG_RightArrow : null}

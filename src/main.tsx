@@ -7,26 +7,26 @@ import { icons } from "./icons.tsx";
 let items : Array<item> = [
                 {
                     name: "Back",
-                    shortcut: "Alt+Left arrow",
+                    shortcut: ["Alt","Left" ,"arrow"],
                     icon: icons.SVG_24hour,
                     id: 1,
                 },
                 {
                     name: "Forward",
-                    shortcut: "Alt+Right arrow",
+                    shortcut: ["Alt","Right", "arrow"],
                     icon: icons.SVG_Add,
                     isDisabled: true,
                     id: 2,
                 },
                 {
                     name: "Refresh",
-                    shortcut: "Ctrl+R",
+                    shortcut: ["Ctrl","R"],
                     id: 3,
                 },
                 { seperator: true, id: 5555 },
                 {
                     name: "Save as",
-                    shortcut: "Ctrl+S",
+                    shortcut: ["Ctrl","S"],
                     icon: icons.SVG_ReadAloud,
                     id: 4,
                 },
@@ -41,17 +41,17 @@ let items : Array<item> = [
                     options: [
                         {
                             name: "Back",
-                            shortcut: "Alt+Left arrow",
+                            shortcut: ["Alt","Left", "arrow"],
                             id: 6.1,
                             options: [
                                 {
                                     name: "Back",
-                                    shortcut: "Alt+Left arrow",
+                                    shortcut: ["Alt","Left", "arrow"],
                                     id: 6.1,
                                 },
                                 {
                                     name: "Forward",
-                                    shortcut: "Alt+Right arrow",
+                                    shortcut: ["Alt", "Right" ,"arrow"],
                                     icon: icons.SVG_Add,
                                     isDisabled: true,
                                     id: 6.2,
@@ -61,7 +61,7 @@ let items : Array<item> = [
                         },
                         {
                             name: "Forward",
-                            shortcut: "Alt+Right arrow",
+                            shortcut: ["Alt", "Right" ,"arrow"],
                             icon: icons.SVG_Add,
                             isDisabled: true,
                             id: 6.2,
