@@ -66,6 +66,7 @@ const ContextMenu = ({
     const [xAxis, setXAxis] = useState<string>("0px");
 
     const handleClosing = useCallback((event) => {
+
         let element = document.querySelector(".context-menu");
         if (element) {
             let elementPositon = element.getBoundingClientRect();
@@ -84,6 +85,7 @@ const ContextMenu = ({
     }, []);
 
     const handleShowing = useCallback((event) => {
+        event.preventDefault()
         setShowing(true);
         setXAxis(`${event.clientX}px`);
         setYAxis(`${event.clientY}px`);
