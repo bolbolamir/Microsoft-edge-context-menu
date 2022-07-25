@@ -1,4 +1,3 @@
-import React from "react";
 
 const Icon = (name: string) => {
     return name == "SVG_rightArrow" ? (

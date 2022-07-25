@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
 import "./main.css";
 import { ContextMenu , type item } from "./context-menu";
 import Icon from "./icons";
+
 
 let items : Array<item> = [
                 {
